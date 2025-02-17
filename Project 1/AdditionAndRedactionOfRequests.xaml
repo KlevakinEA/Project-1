@@ -22,5 +22,7 @@
         <Label Content="Вес (в кг.)" HorizontalAlignment="Left" Margin="10,217,0,0" VerticalAlignment="Top"/>
         <Label Content="Количество" HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top"/>
         <Label Content="Объём (в куб.м.)" HorizontalAlignment="Left" Margin="10,266,0,0" VerticalAlignment="Top"/>
+        <ComboBox Margin="0,101,10,0" VerticalAlignment="Top" ItemsSource="{Binding Source={x:Static local:AdditionAndRedactionOfRequests.Statuses}}" SelectedItem="{Binding ShowingRequest.status, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AdditionAndRedactionOfRequests}}}" HorizontalAlignment="Right" Width="100"/>
+        <Label Content="Статус" HorizontalAlignment="Left" Margin="690,70,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

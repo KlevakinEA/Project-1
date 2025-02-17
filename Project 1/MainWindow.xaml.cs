@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project_1.Context;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -34,13 +35,13 @@ namespace Project_1
             Request current = new Request("3", DateTime.Now, 1, 1, 10, 1, "Name MiddleName LastName", "88005553535", Context.Status.InStorage);
             ShowingRequests.Add(current);
             AdditionAndRedactionOfRequests aaror = new AdditionAndRedactionOfRequests(current);
-            aaror.Show();
+            aaror.ShowDialog();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             AdditionAndRedactionOfRequests aaror = new AdditionAndRedactionOfRequests((Request)RequestsList.SelectedItem);
-            aaror.Show();
+            aaror.ShowDialog();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

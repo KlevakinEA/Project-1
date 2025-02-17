@@ -12,6 +12,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Project_1
@@ -27,5 +28,6 @@ namespace Project_1
             ShowingRequest = request;
             InitializeComponent();
         }
+        public static IEnumerable<Status> Statuses { get; set; } = Enum.GetValues(typeof(Status)).Cast<Status>();
     }
 }
