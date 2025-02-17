@@ -1,0 +1,26 @@
+﻿<Window x:Class="Project_1.AdditionAndRedactionOfRequests"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project_1"
+        mc:Ignorable="d"
+        Title="AdditionAndRedactionOfRequests" Height="450" Width="800"
+        Name="AAROR" Topmost="True" ShowInTaskbar="False" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DatePicker Margin="0,41,10,0" SelectedDate="{Binding ShowingRequest.date, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AdditionAndRedactionOfRequests}}}" HorizontalAlignment="Right" Width="100" Height="24" VerticalAlignment="Top"/>
+        <TextBox Margin="10,41,115,0" TextWrapping="Wrap" Text="{Binding ShowingRequest.fullName, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AdditionAndRedactionOfRequests}}}" VerticalAlignment="Top"/>
+        <TextBox Margin="10,95,115,0" TextWrapping="Wrap" Text="{Binding ShowingRequest.phoneNumber, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AdditionAndRedactionOfRequests}}}" VerticalAlignment="Top"/>
+        <TextBox Margin="10,193,115,0" TextWrapping="Wrap" Text="{Binding ShowingRequest.distance, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AdditionAndRedactionOfRequests}}}" VerticalAlignment="Top"/>
+        <TextBox Margin="10,144,115,0" TextWrapping="Wrap" Text="{Binding ShowingRequest.quantity, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AdditionAndRedactionOfRequests}}}" VerticalAlignment="Top"/>
+        <TextBox Margin="10,292,115,0" TextWrapping="Wrap" Text="{Binding ShowingRequest.volume, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AdditionAndRedactionOfRequests}}}" VerticalAlignment="Top"/>
+        <TextBox Margin="10,243,115,0" TextWrapping="Wrap" Text="{Binding ShowingRequest.weight, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AdditionAndRedactionOfRequests}}}" VerticalAlignment="Top"/>
+        <Label Content="Выбор даты" Margin="0,10,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="100"/>
+        <Label Content="Расстояние (в км.)" HorizontalAlignment="Left" Margin="10,167,0,0" VerticalAlignment="Top"/>
+        <Label Content="ФИО" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Номер телефона" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top"/>
+        <Label Content="Вес (в кг.)" HorizontalAlignment="Left" Margin="10,217,0,0" VerticalAlignment="Top"/>
+        <Label Content="Количество" HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top"/>
+        <Label Content="Объём (в куб.м.)" HorizontalAlignment="Left" Margin="10,266,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Project_1.Context
+{
+    /// <summary>
+    /// Статус доставки
+    /// </summary>
+    public enum Status
+    {
+        /// <summary>
+        /// На складе
+        /// </summary>
+        InStorage,
+        /// <summary>
+        /// В пути
+        /// </summary>
+        OnTheWay,
+        /// <summary>
+        /// Доставлено
+        /// </summary>
+        Delivered
+    }
+}
