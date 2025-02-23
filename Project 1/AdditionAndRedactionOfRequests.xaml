@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Project_1"
         mc:Ignorable="d"
         Title="AdditionAndRedactionOfRequests" Height="450" Width="800"
-        Name="AAROR" Topmost="True" ShowInTaskbar="False" WindowStartupLocation="CenterScreen">
+        Name="AAROR" ShowInTaskbar="False" WindowStartupLocation="CenterScreen">
     <Grid>
         <DatePicker Margin="0,41,10,0" SelectedDate="{Binding ShowingRequest.date, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AdditionAndRedactionOfRequests}}}" HorizontalAlignment="Right" Width="100" Height="24" VerticalAlignment="Top"/>
         <TextBox Margin="10,41,115,0" TextWrapping="Wrap" Text="{Binding ShowingRequest.fullName, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AdditionAndRedactionOfRequests}}}" VerticalAlignment="Top"/>
@@ -23,6 +23,9 @@
         <Label Content="Количество" HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top"/>
         <Label Content="Объём (в куб.м.)" HorizontalAlignment="Left" Margin="10,266,0,0" VerticalAlignment="Top"/>
         <ComboBox Margin="0,101,10,0" VerticalAlignment="Top" ItemsSource="{Binding Source={x:Static local:AdditionAndRedactionOfRequests.Statuses}}" SelectedItem="{Binding ShowingRequest.status, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AdditionAndRedactionOfRequests}}}" HorizontalAlignment="Right" Width="100"/>
-        <Label Content="Статус" HorizontalAlignment="Left" Margin="690,70,0,0" VerticalAlignment="Top"/>
+        <Label Content="Статус" Margin="0,70,65,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="45"/>
+        <Label Content="Механик" Margin="0,128,51,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="59"/>
+        <Button Content="Select" Margin="0,180,10,0" VerticalAlignment="Top" Height="34" Click="Button_Click" HorizontalAlignment="Right" Width="100"/>
+        <TextBlock Margin="0,159,10,0" Text="{Binding ShowingRequest.mechanicID, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AdditionAndRedactionOfRequests}}}" VerticalAlignment="Top" HorizontalAlignment="Right" Width="100"/>
     </Grid>
 </Window>

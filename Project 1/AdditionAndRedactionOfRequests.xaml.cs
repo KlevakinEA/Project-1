@@ -29,5 +29,11 @@ namespace Project_1
             InitializeComponent();
         }
         public static IEnumerable<Status> Statuses { get; set; } = Enum.GetValues(typeof(Status)).Cast<Status>();
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Mechanic_selection s = new Mechanic_selection();
+            s.ShowDialog();
+            ShowingRequest.mechanicID = ((Mechanic)s.MechanicsList.SelectedItem).mechanicID;
+        }
     }
 }

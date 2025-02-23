@@ -3,23 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Project_1.Context;
 
-namespace Project_1
+namespace Project_1.Context
 {
-    public class Request : IDisposable
+    public class Mechanic : IDisposable
     {
         public bool _isDisposed = false;
-        public string requestID { get; set; }
-        public DateTime date { get; set; }
-        public float weight { get; set; }
-        public float volume { get; set; }
-        public float distance { get; set; }
-        public int quantity { get; set; }
+        public string mechanicID { get; set; }
         public string fullName { get; set; }
         public string phoneNumber { get; set; }
-        public Status status { get; set; }
-        public string mechanicID { get; set; }
+        public int experience { get; set; }
 
         protected virtual void Dispose(bool disposing)
         {
@@ -40,17 +33,12 @@ namespace Project_1
             // about the cleaning event 
             GC.SuppressFinalize(this);
         }
-        public Request(string requestID, DateTime date, float weight, float volume, float distance, int quantity, string fullName, string phoneNumber, Status status)
+        public Mechanic(string mechanicID, string fullName, string phoneNumber, int experience)
         {
-            this.requestID = requestID;
-            this.date = date;
-            this.weight = weight;
-            this.volume = volume;
-            this.distance = distance;
-            this.quantity = quantity;
+            this.mechanicID = mechanicID;
             this.fullName = fullName;
             this.phoneNumber = phoneNumber;
-            this.status = status;
+            this.experience = experience;
         }
     }
 }

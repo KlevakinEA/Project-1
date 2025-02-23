@@ -1,0 +1,19 @@
+﻿<Window x:Class="Project_1.MechanicRedaction"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project_1"
+        mc:Ignorable="d"
+        Title="MechanicRedaction" Height="239" Width="220">
+    <Grid>
+        <TextBox Margin="10,41,10,0" TextWrapping="Wrap" Text="{Binding Mechanic.mechanicID, RelativeSource={RelativeSource AncestorType={x:Type local:MechanicRedaction}}}" VerticalAlignment="Top"/>
+        <TextBox Margin="10,95,10,0" TextWrapping="Wrap" Text="{Binding Mechanic.fullName, RelativeSource={RelativeSource AncestorType={x:Type local:MechanicRedaction}}}" VerticalAlignment="Top"/>
+        <TextBox Margin="10,144,10,0" TextWrapping="Wrap" Text="{Binding Mechanic.phoneNumber, RelativeSource={RelativeSource AncestorType={x:Type local:MechanicRedaction}}}" VerticalAlignment="Top"/>
+        <TextBox Margin="10,198,10,0" TextWrapping="Wrap" Text="{Binding Mechanic.experience, RelativeSource={RelativeSource AncestorType={x:Type local:MechanicRedaction}}}" VerticalAlignment="Top"/>
+        <Label Content="ID" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Full name" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top"/>
+        <Label Content="Number" HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top"/>
+        <Label Content="Experience" HorizontalAlignment="Left" Margin="10,167,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

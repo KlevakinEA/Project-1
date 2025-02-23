@@ -55,6 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="AdditionAndRedactionOfMechanics.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AdditionAndRedactionOfRequests.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -63,6 +67,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="AdditionAndRedactionOfMechanics.xaml.cs">
+      <DependentUpon>AdditionAndRedactionOfMechanics.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AdditionAndRedactionOfRequests.xaml.cs">
       <DependentUpon>AdditionAndRedactionOfRequests.xaml</DependentUpon>
     </Compile>
@@ -70,14 +77,29 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Context\Mechanic.cs" />
     <Compile Include="Context\Request.cs" />
     <Compile Include="Context\Status.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MechanicRedaction.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Mechanic_selection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MechanicRedaction.xaml.cs">
+      <DependentUpon>MechanicRedaction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mechanic_selection.xaml.cs">
+      <DependentUpon>Mechanic_selection.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

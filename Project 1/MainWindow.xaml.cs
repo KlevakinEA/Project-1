@@ -23,6 +23,7 @@ namespace Project_1
     public partial class MainWindow : Window
     {
         public static ObservableCollection<Request> ShowingRequests { get; set; } = new ObservableCollection<Request>();
+        public static ObservableCollection<Mechanic> Mechanics { get; set; } = new ObservableCollection<Mechanic>();
         public MainWindow()
         {
             InitializeComponent();
@@ -47,6 +48,12 @@ namespace Project_1
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             ShowingRequests.RemoveAt(RequestsList.SelectedIndex);
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            AdditionAndRedactionOfMechanics current = new AdditionAndRedactionOfMechanics(Mechanics);
+            current.ShowDialog();
         }
     }
 }
