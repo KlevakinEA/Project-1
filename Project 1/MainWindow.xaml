@@ -21,7 +21,8 @@
         <Button Content="Redact" Margin="0,65,10,0" Height="50" VerticalAlignment="Top" HorizontalAlignment="Right" Width="100" Click="Button_Click_1"/>
         <Label HorizontalAlignment="Left" Margin="475,303,0,0" VerticalAlignment="Top" Name="Console"/>
         <Button Content="Delete" Margin="0,120,10,0" VerticalAlignment="Top" Height="49" HorizontalAlignment="Right" Width="100" Click="Button_Click_2"/>
-        <Button Content="Mechanics" Margin="0,0,10,10" HorizontalAlignment="Right" Width="100" Height="50" VerticalAlignment="Bottom" Click="Button_Click_3"/>
+        <Button Content="Delivers" Margin="0,0,10,10" HorizontalAlignment="Right" Width="100" Height="50" VerticalAlignment="Bottom" Click="Button_Click_3"/>
+        <Button Content="Statistics" Margin="0,0,10,65" HorizontalAlignment="Right" Width="100" Height="50" VerticalAlignment="Bottom" Click="Button_Click_4"/>
 
     </Grid>
 </Window>

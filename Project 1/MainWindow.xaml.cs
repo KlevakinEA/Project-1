@@ -27,13 +27,18 @@ namespace Project_1
         public MainWindow()
         {
             InitializeComponent();
-            ShowingRequests.Add(new Request("1", DateTime.Now, 10, 10, 100, 10, "Name Name Name", "88005553535", Context.Status.InStorage));
-            ShowingRequests.Add(new Request("2", DateTime.Now, 10, 10, 100, 10, "Name Name Name", "88005553535", Context.Status.InStorage));
+            ShowingRequests.Add(new Request("1", DateTime.Now, 10, 10, 100, 10, "Name Name Name", "88005553535", Status.InStorage, Context.Type.Other));
+            ShowingRequests.Add(new Request("2", DateTime.Now, 10, 10, 100, 10, "Name Name Name", "88005553535", Status.InStorage, Context.Type.Other));
+            Mechanics.Add(new Mechanic("1", "Name", "1902345", 1));
+            ShowingRequests[0].mechanicID = "1";
+            ShowingRequests[1].mechanicID = "1";
+            ShowingRequests[0].completionDate = ShowingRequests[0].date + TimeSpan.FromMinutes(10);
+            ShowingRequests[1].completionDate = ShowingRequests[1].date + TimeSpan.FromDays(10);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Request current = new Request("3", DateTime.Now, 1, 1, 10, 1, "Name MiddleName LastName", "88005553535", Context.Status.InStorage);
+            Request current = new Request("3", DateTime.Now, 1, 1, 10, 1, "Name MiddleName LastName", "88005553535", Status.InStorage, Context.Type.Other);
             ShowingRequests.Add(current);
             AdditionAndRedactionOfRequests aaror = new AdditionAndRedactionOfRequests(current);
             aaror.ShowDialog();
@@ -54,6 +59,12 @@ namespace Project_1
         {
             AdditionAndRedactionOfMechanics current = new AdditionAndRedactionOfMechanics(Mechanics);
             current.ShowDialog();
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            Statistics statistics = new Statistics(ShowingRequests, Mechanics);
+            statistics.ShowDialog();
         }
     }
 }

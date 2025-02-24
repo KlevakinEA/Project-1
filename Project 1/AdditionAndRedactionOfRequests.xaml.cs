@@ -29,6 +29,7 @@ namespace Project_1
             InitializeComponent();
         }
         public static IEnumerable<Status> Statuses { get; set; } = Enum.GetValues(typeof(Status)).Cast<Status>();
+        public static IEnumerable<Context.Type> Types { get; set; } = Enum.GetValues(typeof(Context.Type)).Cast<Context.Type>();
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Mechanic_selection s = new Mechanic_selection();

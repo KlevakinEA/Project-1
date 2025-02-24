@@ -24,8 +24,12 @@
         <Label Content="Объём (в куб.м.)" HorizontalAlignment="Left" Margin="10,266,0,0" VerticalAlignment="Top"/>
         <ComboBox Margin="0,101,10,0" VerticalAlignment="Top" ItemsSource="{Binding Source={x:Static local:AdditionAndRedactionOfRequests.Statuses}}" SelectedItem="{Binding ShowingRequest.status, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AdditionAndRedactionOfRequests}}}" HorizontalAlignment="Right" Width="100"/>
         <Label Content="Статус" Margin="0,70,65,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="45"/>
-        <Label Content="Механик" Margin="0,128,51,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="59"/>
+        <Label Content="Доставщик" Margin="0,128,33,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="77"/>
         <Button Content="Select" Margin="0,180,10,0" VerticalAlignment="Top" Height="34" Click="Button_Click" HorizontalAlignment="Right" Width="100"/>
         <TextBlock Margin="0,159,10,0" Text="{Binding ShowingRequest.mechanicID, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AdditionAndRedactionOfRequests}}}" VerticalAlignment="Top" HorizontalAlignment="Right" Width="100"/>
+        <ComboBox Margin="0,243,10,0" VerticalAlignment="Top" ItemsSource="{Binding Source={x:Static local:AdditionAndRedactionOfRequests.Types}}" SelectedItem="{Binding ShowingRequest.type, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AdditionAndRedactionOfRequests}}}" HorizontalAlignment="Right" Width="100"/>
+        <Label Content="Тип" HorizontalAlignment="Left" Margin="690,219,0,0" VerticalAlignment="Top"/>
+        <DatePicker Margin="0,301,10,0" SelectedDate="{Binding ShowingRequest.completionDate, RelativeSource={RelativeSource AncestorType={x:Type local:AdditionAndRedactionOfRequests}, Mode=FindAncestor}}" HorizontalAlignment="Right" Width="100" Height="24" VerticalAlignment="Top"/>
+        <Label Content="Дата завершения" HorizontalAlignment="Left" Margin="690,270,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

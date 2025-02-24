@@ -11,9 +11,9 @@
             <ListView.View>
                 <GridView AllowsColumnReorder="true">
                     <GridViewColumn DisplayMemberBinding="{Binding mechanicID}" Header="ID" Width="100"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding fullName}" Header="Ordering date" Width="200"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding phoneNumber}" Header="Full name" Width="200"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding experience}" Header="Status" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding fullName}" Header="Full name" Width="200"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding phoneNumber}" Header="Phone number" Width="200"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding experience}" Header="Experience" Width="100"/>
                 </GridView>
             </ListView.View>
         </ListView>

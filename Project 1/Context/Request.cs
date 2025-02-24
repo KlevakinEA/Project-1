@@ -20,6 +20,8 @@ namespace Project_1
         public string phoneNumber { get; set; }
         public Status status { get; set; }
         public string mechanicID { get; set; }
+        public Context.Type type { get; set; }
+        public DateTime completionDate { get; set; }
 
         protected virtual void Dispose(bool disposing)
         {
@@ -40,7 +42,7 @@ namespace Project_1
             // about the cleaning event 
             GC.SuppressFinalize(this);
         }
-        public Request(string requestID, DateTime date, float weight, float volume, float distance, int quantity, string fullName, string phoneNumber, Status status)
+        public Request(string requestID, DateTime date, float weight, float volume, float distance, int quantity, string fullName, string phoneNumber, Status status, Context.Type type)
         {
             this.requestID = requestID;
             this.date = date;
@@ -51,6 +53,7 @@ namespace Project_1
             this.fullName = fullName;
             this.phoneNumber = phoneNumber;
             this.status = status;
+            this.type = type;
         }
     }
 }
